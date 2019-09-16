@@ -7,20 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   model: any = {};
-  constructor(private authService: AuthService ) { }
+  constructor(private authService: AuthService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   login() {
-    this.authService.login(this.model).subscribe(next => {
-
-      console.log('logged in successfully');
-    }, error => {
-      console.log('failed to log');
-    });
+    this.authService.login(this.model).subscribe(
+      next => {
+        console.log('logged in successfully');
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
   loggedIn() {
     const token = localStorage.getItem('token');

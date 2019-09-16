@@ -7,17 +7,15 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  constructor(private http: HttpClient) { }
-registerMode = false;
-  ngOnInit() {
-  }
+  constructor(private http: HttpClient) {}
+  registerMode = false;
+  ngOnInit() {}
 
   registerToggle() {
     this.registerMode = !this.registerMode;
   }
 
-cancelRegisterMode(registerMode: boolean) {
-  this.registerMode = registerMode;
-}
-
+  cancelRegisterMode(registerMode: boolean) {
+    this.registerMode = registerMode;
+  }
 }
