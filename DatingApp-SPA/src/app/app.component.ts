@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DatingApp-SPA';
+  register = true;
+
+  hideRegisterForm(event) {
+this.register = event;
+
 }
+
+}
+
